@@ -1,0 +1,3 @@
+[submodule "ftplugin/javascript/jslint/JSLint"]
+	path = ftplugin/javascript/jslint/JSLint
+	url = git://github.com/douglascrockford/JSLint.git
