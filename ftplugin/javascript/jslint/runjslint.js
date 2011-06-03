@@ -1,10 +1,10 @@
 /*jslint laxbreak: true */
 
 if (typeof require != 'undefined') {
-    JSLINT = require('./jslint-core').JSLINT;
+    JSLINT = require('./jslint').JSLINT;
     print = require('sys').puts;
 } else {
-    load('jslint-core.js');
+    load('jslint.js');
 }
 
 // Import extra libraries if running in Rhino.
