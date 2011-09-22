@@ -77,7 +77,13 @@ let s:plugin_path = s:install_dir . "/jslint/"
 if has('win32')
   let s:plugin_path = substitute(s:plugin_path, '/', '\', 'g')
 endif
-let s:cmd = "cd " . s:plugin_path . " && " . s:cmd . " " . s:plugin_path . "runjslint." . s:runjslint_ext
+if exists("g:jshint") && g:jshint
+    let s:hintlint = 'jshint'
+else
+    let s:hintlint = 'jslint'
+end
+
+let s:cmd = "cd " . s:plugin_path . " && " . s:cmd . " " . s:plugin_path . "run" . s:hintlint . "." . s:runjslint_ext
 
 let s:jslintrc_file = expand('~/.jslintrc')
 if filereadable(s:jslintrc_file)
@@ -153,6 +159,7 @@ function! s:JSLint()
   endif
   let b:jslint_output = system(s:cmd, lines . "\n")
   if v:shell_error
+      echo b:jslint_output
     echoerr 'could not invoke JSLint!'
     let b:jslint_disabled = 1
   end

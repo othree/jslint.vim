@@ -5,7 +5,8 @@ if (typeof require != 'undefined') {
 
     print = require('sys').puts;
 } else {
-    load('jslint.js');
+    load('jshint.js');
+    JSLINT = JSHINT;
 }
 
 // Import extra libraries if running in Rhino.
