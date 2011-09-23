@@ -14,6 +14,16 @@ The source code for jslint.vim is hosted at
 This is alpha software and is under heavy development.
 
 
+Changes of this fork
+-----------------------
+
+- Use submodule for [jslint.js][].
+- Add basic support for [jshint][], also add jshint as submodule.
+- `let g:jshint = 1` in vimrc to use jshint.
+
+[jslint.js]:https://github.com/douglascrockford/JSLint
+[jshint]:https://github.com/jshint/jshint/
+
 Installation
 -----------------------
 
