@@ -93,9 +93,13 @@ run the `bin/jslint` executable in a terminal. For example:
 You can copy `bin/jslint` into for `PATH` for easier access. The executable
 requires that the Vim plugin is installed and also requires Ruby.
 
-To disable error highlighting altogether add this line to your `~/.vimrc` file:
+To disable error line sign, add this line to your `~/.vimrc` file:
 
-    let g:JSLintHighlightErrorLine = 0
+    let g:JSLintSignErrorLine = 0
+
+To enable error highlighting altogether add this line to your `~/.vimrc` file:
+
+    let g:JSLintHighlightErrorLine = 1
 
 
 Working with quickfix
